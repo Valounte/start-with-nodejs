@@ -1,0 +1,27 @@
+{
+  "name": "start-with-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.28.0",
+    "sequelize-cli": "^6.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Valounte/start-with-nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Valounte/start-with-nodejs/issues"
+  },
+  "homepage": "https://github.com/Valounte/start-with-nodejs#readme"
+}
