@@ -1,12 +1,13 @@
 const express = require('express');
 const userRouter = require('./src/routes/User');
-const bodyParser = require('body-parser');
-var Sequelize = require("sequelize");
+const loginRouter = require('./src/routes/Login')
 const app = express();
 const port = 3000;
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
+
 app.use('/', userRouter);
+app.use('/', loginRouter);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
