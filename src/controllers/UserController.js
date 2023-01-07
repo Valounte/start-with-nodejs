@@ -1,12 +1,20 @@
 const db = require('../../database/models/index');
 const bcrypt = require("bcrypt");
+const authenticateService = require("../services/AuthenticateService");
 
 exports.listAllUsers = (req, res) => {
+    if (!authenticateService.checkAuthenticate(req)) {
+        res.send("invalid token");
+    }
+
     res.send({ user: db.User.findAll()});
     
 };
 
 exports.createUser = async (req, res) => {
+    if (!authenticateService.checkAuthenticate(req)) {
+        res.send("invalid token");
+    }
 
     const salt = await bcrypt.genSalt(10);
 
